@@ -1,0 +1,99 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .dashboard-menu {
+    width: 240px;
+    background-color: #2196F3; /* Azul principal */
+    padding-top: 64px; /* Para deixar espaço para o perfil */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dashboard-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2196F3; /* Azul principal */
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  /* Estilos do Perfil de Usuário */
+  .dashboard-profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    background-color: #2196F3; /* Azul principal */
+    color: #fff; /* Texto em branco */
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-icon {
+    font-size: 2rem;
+    margin-right: 8px;
+  }
+  
+  .profile-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos das opções do menu */
+  .dashboard-menu .MuiListItem-button:hover {
+    background-color: #0c7bbf; /* Tonalidade azul mais escura ao passar o mouse */
+  }
+  
+  /* Estilo do chat */
+  .chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2196F3; /* Azul principal */
+    color: #fff; /* Texto em branco */
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Estilo do botão de logout */
+  .logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #2196F3; /* Azul principal */
+    color: #fff; /* Texto em branco */
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  
