@@ -1,34 +1,26 @@
-import React from 'react'
-import { Button } from '@mui/material'
-import axios from 'axios'
-import { useHistory } from 'react-router-dom'
+import React from 'react';
+import { Button } from '@mui/material';
+import axios from 'axios';
+import { useLocation } from 'react-router-dom'; // Importe useLocation
 
-interface SentMailPageProps {
-  location: {
-    state: {
-      name: string
-      email: string
-    }
-  }
-}
 
-const SentMailPage: React.FC<SentMailPageProps> = ({ location }) => {
-  const history = useHistory()
+const SentMailPage: React.FC = () => {
+  const location = useLocation(); // Use useLocation para obter o objeto de localização
 
   const handleResendEmail = async () => {
     try {
-      const apiUrl = `${process.env.REACT_APP_API_URL}/api/users/sent-mail`
+      const apiUrl = `${process.env.REACT_APP_API_URL}/api/users/sent-mail`;
       await axios.post(apiUrl, {
         email: location.state.email,
-        name: location.state.name
-      })
+        name: location.state.name,
+      });
 
-      alert('Email de confirmação reenviado com sucesso!')
+      alert('Email de confirmação reenviado com sucesso!');
     } catch (error) {
-      console.error('Erro ao reenviar o email:', error)
-      alert('Ocorreu um erro ao reenviar o email de confirmação.')
+      console.error('Erro ao reenviar o email:', error);
+      alert('Ocorreu um erro ao reenviar o email de confirmação.');
     }
-  }
+  };
 
   return (
     <>
@@ -44,7 +36,7 @@ const SentMailPage: React.FC<SentMailPageProps> = ({ location }) => {
         Reenviar Email
       </Button>
     </>
-  )
-}
+  );
+};
 
-export default SentMailPage
+export default SentMailPage;

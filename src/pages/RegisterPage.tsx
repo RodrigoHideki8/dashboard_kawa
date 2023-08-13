@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Button, Container, TextField, Typography } from '@mui/material'
-import { useHistory } from 'react-router-dom' 
+import { useNavigate } from 'react-router-dom'
 import validator from 'validator'
-import '../styles/RegisterPage.css' 
-import { formatCPF, formatPhoneNumber, isValidCPF } from '../utils/validation' 
+import '../styles/RegisterPage.css'
+import { formatCPF, formatPhoneNumber, isValidCPF } from '../utils/validation'
 
 const RegisterPage: React.FC = () => {
-  const history = useHistory() 
+  const navigate = useNavigate()
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -57,20 +57,14 @@ const RegisterPage: React.FC = () => {
 
     try {
       const apiUrl = `${process.env.REACT_APP_API_URL}/api/users/sent-mail`
-      await axios.post(
-        apiUrl,
-        {
-          email: email,
-          name: name
-        }
-      )
+      await axios.post(apiUrl, {
+        email: email,
+        name: name
+      })
     } catch (error) {
       console.log(error)
     }
-    history.push({
-      pathname: '/sent-mail',
-      state: { name: name, email: email }
-    });
+    navigate('/sent-mail', { state: { name: name, email: email } })
   }
 
   return (

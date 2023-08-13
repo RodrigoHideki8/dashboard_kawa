@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Alert } from '@mui/material';
 
 const ConfirmationPage: React.FC = () => {
   const { email } = useParams<{ email: string }>();
-  const history = useHistory();
+  const navigate = useNavigate();
   const [isConfirmed, setIsConfirmed] = useState(false);
 
   useEffect(() => {
@@ -29,12 +29,12 @@ const ConfirmationPage: React.FC = () => {
   useEffect(() => {
     if (isConfirmed) {
       const redirectTimeout = setTimeout(() => {
-        history.push('/login'); 
+        navigate('/login'); 
       }, 3000);
 
       return () => clearTimeout(redirectTimeout);
     }
-  }, [isConfirmed, history]);
+  }, [isConfirmed, navigate]);
 
   return (
     <div>

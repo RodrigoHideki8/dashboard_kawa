@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Button, Container, TextField, Typography } from '@mui/material'
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import '../styles/LoginPage.css'
 
 const LoginPage: React.FC = () => {
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -13,7 +13,7 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = () => {
     if (email === 'usuario@teste.com' && password === 'senha123') {
-      history.push('/dashboard')
+      navigate('/dashboard')
     } else {
       setError('E-mail ou senha inválidos.')
     }

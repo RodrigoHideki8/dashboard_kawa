@@ -4,8 +4,7 @@ import '../../styles/WhatsappButton.css'
 
 const WhatsAppButton: React.FC = () => {
   const handleWhatsAppButtonClick = () => {
-    const phoneNumber = process.env.PHONE_NUMBER_WHATS
-
+    const phoneNumber = process.env.REACT_APP_NOME_DA_VARIAVEL
     const message = 'Olá! Estou interessado em conversar com você.'
 
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
