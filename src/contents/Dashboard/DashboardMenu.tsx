@@ -1,64 +1,74 @@
-import React from 'react';
-import { List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
-import { Link } from 'react-router-dom';
-import HomeIcon from '@mui/icons-material/Home';
-import WorkIcon from '@mui/icons-material/Work';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import PeopleIcon from '@mui/icons-material/People';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import React from 'react'
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Divider
+} from '@mui/material'
+import { Link } from 'react-router-dom'
+import HomeIcon from '@mui/icons-material/Home'
+import WorkIcon from '@mui/icons-material/Work'
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket'
+import PeopleIcon from '@mui/icons-material/People'
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 
 const DashboardMenu: React.FC = () => {
   return (
-    <div className="dashboard-menu">
-      <div className="dashboard-profile">
-        <AccountCircleIcon color="primary" fontSize="large" className="profile-icon" />
-        <ListItemText primary="Nome do Usuário" className="profile-text" />
+    <div className='dashboard-menu'>
+      <div className='dashboard-profile'>
+        <AccountCircleIcon
+          color='primary'
+          fontSize='large'
+          className='profile-icon'
+        />
+        <ListItemText primary='Nome do Usuário' className='profile-text' />
       </div>
       <Divider />
       <List>
-        <ListItem button component={Link} to="/dashboard">
+        <ListItem button component={Link} to='/dashboard'>
           <ListItemIcon>
-            <HomeIcon color="primary" />
+            <HomeIcon color='primary' />
           </ListItemIcon>
-          <ListItemText primary="Home" />
+          <ListItemText primary='Home' />
         </ListItem>
-        <ListItem button component={Link} to="/projects">
+        <ListItem button component={Link} to='/projects'>
           <ListItemIcon>
-            <WorkIcon color="primary" />
+            <WorkIcon color='primary' />
           </ListItemIcon>
-          <ListItemText primary="Projetos" />
+          <ListItemText primary='Projetos' />
         </ListItem>
-        <ListItem button component={Link} to="/products">
+        <ListItem button component={Link} to='/products'>
           <ListItemIcon>
-            <ShoppingBasketIcon color="primary" />
+            <ShoppingBasketIcon color='primary' />
           </ListItemIcon>
-          <ListItemText primary="Produtos" />
+          <ListItemText primary='Produtos' />
         </ListItem>
-        <ListItem button component={Link} to="/clients">
+        <ListItem button component={Link} to='/clients'>
           <ListItemIcon>
-            <PeopleIcon color="primary" />
+            <PeopleIcon color='primary' />
           </ListItemIcon>
-          <ListItemText primary="Clientes" />
+          <ListItemText primary='Clientes' />
         </ListItem>
-        <ListItem button component={Link} to="/financial">
+        <ListItem button component={Link} to='/financial'>
           <ListItemIcon>
-            <MonetizationOnIcon color="primary" />
+            <MonetizationOnIcon color='primary' />
           </ListItemIcon>
-          <ListItemText primary="Financeiro" />
+          <ListItemText primary='Financeiro' />
         </ListItem>
       </List>
       <Divider />
       <List>
-        <ListItem button component={Link} to="/profile">
+        <ListItem button component={Link} to='/profile'>
           <ListItemIcon>
-            <AccountCircleIcon color="primary" fontSize="large" />
+            <AccountCircleIcon color='primary' fontSize='large' />
           </ListItemIcon>
-          <ListItemText primary="Perfil de Usuário" />
+          <ListItemText primary='Perfil de Usuário' />
         </ListItem>
       </List>
     </div>
-  );
-};
+  )
+}
 
-export default DashboardMenu;
+export default DashboardMenu

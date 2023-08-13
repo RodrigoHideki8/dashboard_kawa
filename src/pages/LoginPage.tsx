@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import { Button, Container, TextField, Typography } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Button, Container, TextField, Typography, Grid } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
 
-import '../styles/LoginPage.css'
+import '../styles/LoginPage.css';
 
 const LoginPage: React.FC = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    const cachedMail = localStorage.getItem('cachedMail')
+    const cachedMail = localStorage.getItem('cachedMail');
     if (cachedMail) {
-      setEmail(cachedMail)
+      setEmail(cachedMail);
     }
-  }, [])
+  }, []);
 
   const handleLogin = () => {
-    localStorage.setItem('cachedMail', email)
-    localStorage.setItem('cachedPassword', password)
+    localStorage.setItem('cachedMail', email);
+    localStorage.setItem('cachedPassword', password);
 
     if (email === 'usuario@teste.com' && password === 'senha123') {
-      navigate('/dashboard')
+      navigate('/dashboard');
     } else {
-      setError('E-mail ou senha inválidos.')
+      setError('E-mail ou senha inválidos.');
     }
-  }
+  };
 
   return (
     <Container maxWidth='xs' className='login-container'>
@@ -102,7 +102,7 @@ const LoginPage: React.FC = () => {
         </div>
       </form>
     </Container>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;

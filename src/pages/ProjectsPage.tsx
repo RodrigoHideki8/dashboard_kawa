@@ -1,6 +1,6 @@
 import DashboardMenu from '../contents/Dashboard/DashboardMenu'
-import '../styles/ProfilePage.css'
-const ProfilePage = () => {
+import '../styles/ProjectsPage.css'
+const ProjectPage = () => {
   
   return (
     <div className='photo-gallery-container'>
@@ -10,4 +10,4 @@ const ProfilePage = () => {
   )
 }
 
-export default ProfilePage
+export default ProjectPage
