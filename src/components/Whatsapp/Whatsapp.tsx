@@ -10,7 +10,7 @@ const WhatsAppButton: React.FC = () => {
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`
-    window.location.href = whatsappLink
+    window.open(whatsappLink, '_blank');
   }
 
   return (
