@@ -1,5 +1,16 @@
-import React from 'react'
-import { Container, Typography, Grid, Card, CardContent } from '@mui/material'
+import React, { useState } from 'react'
+import {
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button
+} from '@mui/material'
 import {
   LineChart,
   Line,
@@ -9,23 +20,34 @@ import {
   Tooltip,
   Legend
 } from 'recharts'
-import '../styles/FinancialPage.css' 
+import '../styles/FinancialPage.css' // Importe o arquivo de estilos
 import DashboardMenu from '../contents/Dashboard/DashboardMenu'
 
 const data = [
-  { month: 'Jan', received: 2000, expenses: 800 },
-  { month: 'Feb', received: 1500, expenses: 1000 },
-  { month: 'Mar', received: 1800, expenses: 1200 }
+  { id: 1, month: 'Jan', received: 2000, expenses: 800 },
+  { id: 2, month: 'Feb', received: 1500, expenses: 1000 },
+  { id: 3, month: 'Mar', received: 1800, expenses: 1200 }
 ]
 
 const FinancialPage: React.FC = () => {
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [selectedTransactionIndex, setSelectedTransactionIndex] = useState(-1)
+
   const totalReceived = data.reduce((total, entry) => total + entry.received, 0)
   const totalExpenses = data.reduce((total, entry) => total + entry.expenses, 0)
   const balance = totalReceived - totalExpenses
   const futureBalance = 0
+  const handleOpenDialog = (index: number) => {
+    setSelectedTransactionIndex(index)
+    setDialogOpen(true)
+  }
 
+  const handleCloseDialog = () => {
+    setSelectedTransactionIndex(-1)
+    setDialogOpen(false)
+  }
   return (
-    <>
+    <div className='financial-container-content'>
       <DashboardMenu />
       <Container className='financial-container'>
         <Typography variant='h4' className='financial-heading'>
@@ -96,8 +118,42 @@ const FinancialPage: React.FC = () => {
             />
           </LineChart>
         </div>
+        <div className='transactions-details'>
+          {/* Container para os detalhes das transações */}
+          <Typography variant='h6'>Detalhes das Transações</Typography>
+          {data.map((transaction, index) => (
+            <div key={transaction.id} className='transaction-card'>
+              <CardContent>
+                <Typography>
+                  Mês: {transaction.month} - Recebido: R${' '}
+                  {transaction.received.toFixed(2)} - Despesa: R${' '}
+                  {transaction.expenses.toFixed(2)}
+                </Typography>
+                <Button onClick={() => handleOpenDialog(index)}>
+                  Detalhes
+                </Button>
+              </CardContent>
+            </div>
+          ))}
+        </div>
+        <Dialog open={dialogOpen} onClose={handleCloseDialog}>
+          <DialogTitle>Detalhes da Transação</DialogTitle>
+          <DialogContent>
+            {selectedTransactionIndex !== -1 && (
+              <Typography>
+                Mês: {data[selectedTransactionIndex].month} <br />
+                Recebido: R${' '}
+                {data[selectedTransactionIndex].received.toFixed(2)} <br />
+                Despesa: R$ {data[selectedTransactionIndex].expenses.toFixed(2)}
+              </Typography>
+            )}
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseDialog}>Fechar</Button>
+          </DialogActions>
+        </Dialog>
       </Container>
-    </>
+    </div>
   )
 }
 

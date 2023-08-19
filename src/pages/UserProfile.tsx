@@ -3,10 +3,8 @@ import '../styles/ProfilePage.css'
 const ProfilePage = () => {
   
   return (
-    <div className='photo-gallery-container'>
       <DashboardMenu />
       
-    </div>
   )
 }
 

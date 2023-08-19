@@ -19,9 +19,6 @@ const DashboardPage: React.FC = () => {
       <DashboardMenu />
       <div className="dashboard-content">
         <div className="dashboard-profile">
-          {/* Ícone do Perfil de Usuário com a classe profile-icon */}
-          <AccountCircleIcon className="profile-icon" />
-          <span className="profile-text">Nome do Usuário</span>
         </div>
         <div className="dashboard-heading">
           <h4>Bem-vindo ao Dashboard Kawa Tech</h4>

@@ -9,6 +9,7 @@ import ProductsPage from './pages/ProductsPage'
 import FinancialPage from './pages/FinancialPage'
 import ProjectPage from './pages/ProjectsPage'
 import ProfilePage from './pages/UserProfile'
+import ClientListPage from './pages/ClientsPage'
 const App: React.FC = () => {
   return (
     <Router>
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <Route path='/profile' element={<ProfilePage />} />
         <Route path='/projects' element={<ProjectPage />} />
         <Route path='/products' element={<ProductsPage />} />
+        <Route path="/clients" element={<ClientListPage />} /> 
         <Route path='/financial' element={<FinancialPage />} />
         <Route path='/sent-mail' element={<SentMailPage />} />
         <Route path='/confirmation-mail' element={<ConfirmationPage />} />

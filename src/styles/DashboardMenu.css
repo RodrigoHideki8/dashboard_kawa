@@ -5,8 +5,8 @@
   
   .dashboard-menu {
     width: 240px;
-    background-color: #2196F3; /* Azul principal */
-    padding-top: 64px; /* Para deixar espaço para o perfil */
+    background-color: #2196F3; 
+    padding-top: 64px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,19 +25,18 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: 800;
-    color: #2196F3; /* Azul principal */
+    color: #2196F3; 
     text-align: center;
     margin: 2rem 0;
   }
   
-  /* Estilos do Perfil de Usuário */
   .dashboard-profile {
     position: absolute;
     top: 0;
     left: 0;
     width: 240px;
-    background-color: #2196F3; /* Azul principal */
-    color: #fff; /* Texto em branco */
+    background-color: #2196F3;
+    color: #fff; 
     padding: 8px 16px;
     display: flex;
     align-items: center;
@@ -55,18 +54,16 @@
     padding: 0;
   }
   
-  /* Estilos das opções do menu */
   .dashboard-menu .MuiListItem-button:hover {
-    background-color: #0c7bbf; /* Tonalidade azul mais escura ao passar o mouse */
+    background-color: #0c7bbf; 
   }
   
-  /* Estilo do chat */
   .chat-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #2196F3; /* Azul principal */
-    color: #fff; /* Texto em branco */
+    background-color: #2196F3; 
+    color: #fff; 
     padding: 10px 20px;
     border-radius: 50px;
     display: flex;
@@ -76,13 +73,12 @@
     cursor: pointer;
   }
   
-  /* Estilo do botão de logout */
   .logout-button {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #2196F3; /* Azul principal */
-    color: #fff; /* Texto em branco */
+    background-color: #2196F3; 
+    color: #fff; 
     padding: 10px 20px;
     border-radius: 50px;
     display: flex;
