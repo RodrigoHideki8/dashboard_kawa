@@ -57,6 +57,18 @@ const DashboardMenu: React.FC = () => {
           </ListItemIcon>
           <ListItemText primary='Financeiro' />
         </ListItem>
+        <ListItem button component={Link} to='/forum'>
+          <ListItemIcon>
+            <PeopleIcon color='primary' />
+          </ListItemIcon>
+          <ListItemText primary='Forum' />
+        </ListItem>
+        <ListItem button component={Link} to='/history'>
+          <ListItemIcon>
+            <PeopleIcon color='primary' />
+          </ListItemIcon>
+          <ListItemText primary='Tópicos de Usuarios' />
+        </ListItem>
       </List>
       <Divider />
       <List>

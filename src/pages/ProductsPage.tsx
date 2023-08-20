@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
-import { Container, Grid, Paper, IconButton, Pagination } from '@mui/material'
+import {
+  Container,
+  Typography,
+  Grid,
+  Paper,
+  IconButton,
+  Pagination
+} from '@mui/material'
 import { PhotoLibrary } from '@mui/icons-material'
 import '../styles/ProductsPage.css'
 import DashboardMenu from '../contents/Dashboard/DashboardMenu'
 
 const ProductsPage = () => {
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 12 
+  const itemsPerPage = 12
 
   const photoUrls = Array.from(
     { length: 50 },
@@ -31,6 +38,9 @@ const ProductsPage = () => {
     <div className='photo-gallery-container'>
       <DashboardMenu />
       <Container className='photo-gallery-content'>
+        <Typography variant='h4' gutterBottom className='futuristic-heading'>
+          Produtos
+        </Typography>
         <Grid container spacing={2}>
           {currentPhotos.map((url, index) => (
             <Grid item xs={6} sm={4} md={3} key={index}>

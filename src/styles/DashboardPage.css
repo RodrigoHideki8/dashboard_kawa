@@ -5,23 +5,23 @@
 
 .menu-drawer {
   width: 240px;
-  background-color: #0e8fde; /* Tonalidade azul para o menu */
+  background-color: #0e8fde;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
   padding: 8px 16px;
-  color: #fff; /* Texto em branco */
+  color: #fff; 
   text-decoration: none;
 }
 
 .menu-icon {
-  color: #fff; /* Ícones em branco */
+  color: #fff; 
 }
 
 .menu-item:hover {
-  background-color: #0c7bbf; /* Tonalidade azul mais escura ao passar o mouse */
+  background-color: #0c7bbf; 
 }
 
 .dashboard-content {
@@ -35,7 +35,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: #2196F3; /* Azul principal */
+  color: #2196F3; 
   text-align: center;
   margin: 2rem 0;
 }
@@ -52,8 +52,8 @@
   left: 30px;
   display: flex;
   align-items: center;
-  background-color: #0e8fde; /* Tonalidade azul para o perfil de usuário */
-  color: #fff; /* Texto em branco */
+  background-color: #0e8fde; 
+  color: #fff; 
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -76,8 +76,8 @@
   top: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #2196F3; /* Azul principal */
-  color: #fff; /* Texto em branco */
+  background-color: #2196F3; 
+  color: #fff; 
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -108,5 +108,12 @@
   margin-bottom: 10px;
 }
 
-
+.notification-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #007bff;
+  font-size: 2rem;
+  cursor: pointer;
+}
 

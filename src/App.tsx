@@ -10,6 +10,8 @@ import FinancialPage from './pages/FinancialPage'
 import ProjectPage from './pages/ProjectsPage'
 import ProfilePage from './pages/UserProfile'
 import ClientListPage from './pages/ClientsPage'
+import Forum from './pages/ForumPage'
+import TopicHistoryPage from './pages/TopicHistory'
 const App: React.FC = () => {
   return (
     <Router>
@@ -21,13 +23,15 @@ const App: React.FC = () => {
         <Route path='/profile' element={<ProfilePage />} />
         <Route path='/projects' element={<ProjectPage />} />
         <Route path='/products' element={<ProductsPage />} />
-        <Route path="/clients" element={<ClientListPage />} /> 
+        <Route path='/clients' element={<ClientListPage />} />
         <Route path='/financial' element={<FinancialPage />} />
         <Route path='/sent-mail' element={<SentMailPage />} />
         <Route path='/confirmation-mail' element={<ConfirmationPage />} />
+        <Route path='/forum' element={<Forum />} />
+        <Route path='/history' element={<TopicHistoryPage />} />
       </Routes>
     </Router>
-  );
+  )
 }
 
 export default App

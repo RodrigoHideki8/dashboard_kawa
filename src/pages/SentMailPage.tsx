@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from '@mui/material';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom'; // Importe useLocation
+import { useLocation } from 'react-router-dom'; 
 
 
 const SentMailPage: React.FC = () => {
-  const location = useLocation(); // Use useLocation para obter o objeto de localização
+  const location = useLocation(); 
 
   const handleResendEmail = async () => {
     try {

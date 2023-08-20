@@ -1,6 +1,4 @@
-/* Estilos para telas pequenas (até 600px) */
 @media screen and (max-width: 600px) {
-    /* Coloque aqui os estilos para telas pequenas */
     .dashboard-container {
       flex-direction: column;
     }
@@ -14,9 +12,7 @@
     }
   }
   
-  /* Estilos para telas médias (entre 600px e 1200px) */
   @media screen and (min-width: 601px) and (max-width: 1200px) {
-    /* Coloque aqui os estilos para telas médias */
     .dashboard-container {
       flex-direction: row;
     }
@@ -30,9 +26,7 @@
     }
   }
   
-  /* Estilos para telas grandes (acima de 1200px) */
   @media screen and (min-width: 1201px) {
-    /* Coloque aqui os estilos para telas grandes */
     .dashboard-container {
       flex-direction: row;
     }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container, TextField, Typography, Grid } from '@mui/material';
+import { Button, Container, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 
 import '../styles/LoginPage.css';

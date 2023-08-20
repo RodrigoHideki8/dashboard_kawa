@@ -2,5 +2,5 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000; /* Para garantir que o botão fique acima dos outros elementos */
+    z-index: 1000; 
   }

@@ -28,18 +28,15 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Customize the styling of the LineChart */
 .recharts-surface {
   width: 100%;
   height: auto;
 }
 
-/* Style the legend */
 .recharts-legend-item {
   font-size: 14px;
 }
 
-/* Style the Tooltip */
 .recharts-tooltip {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -47,7 +44,6 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the legend icon */
 .recharts-legend-icon {
   width: 16px;
   height: 16px;
@@ -60,7 +56,6 @@
   padding: 2rem;
   background-color: #2c313d;
 }
-/* Style the legend text */
 .recharts-legend-item-text {
   font-size: 14px;
 }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Typography, Button, Pagination   } from '@mui/material'
-import ReactPaginate from 'react-paginate'
+import { Container, Typography,  Pagination   } from '@mui/material'
 import '../styles/ClientsPage.css'
 import DashboardMenu from '../contents/Dashboard/DashboardMenu'
 
@@ -91,7 +90,6 @@ const ClientListPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="client-actions">
-                  {/* Adicione ações aqui, se necessário */}
                 </div>
               </div>
             ))}

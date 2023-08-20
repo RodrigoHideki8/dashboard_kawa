@@ -20,7 +20,7 @@ import {
   Tooltip,
   Legend
 } from 'recharts'
-import '../styles/FinancialPage.css' // Importe o arquivo de estilos
+import '../styles/FinancialPage.css' 
 import DashboardMenu from '../contents/Dashboard/DashboardMenu'
 
 const data = [
@@ -119,7 +119,6 @@ const FinancialPage: React.FC = () => {
           </LineChart>
         </div>
         <div className='transactions-details'>
-          {/* Container para os detalhes das transações */}
           <Typography variant='h6'>Detalhes das Transações</Typography>
           {data.map((transaction, index) => (
             <div key={transaction.id} className='transaction-card'>
